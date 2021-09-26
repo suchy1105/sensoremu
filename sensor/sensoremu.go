@@ -1,21 +1,20 @@
 package sensor
 
 import (
-	"fmt"
 	"math/rand"
 )
 
 //Sensor type of date
 type Sensor struct {
-	value int
+	Value int
 }
 
-func (s *Sensor) getmeasurement() {
-	fmt.Println("get measurement sensor")
-	s.value = rand.Intn(40)
+//Getmeasurement method
+func (s *Sensor) Getmeasurement() {
+	s.Value = rand.Intn(40)
 }
 
 //NewSensor generate new sensor reference
 func NewSensor() *Sensor {
-	return &Sensor{value: 0}
+	return &Sensor{Value: 0}
 }
